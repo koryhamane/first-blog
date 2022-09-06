@@ -72,6 +72,7 @@ p {
 
 .one {
     text-indent: 0%;
+	text-align: center;
 }
 
 .MethodWrapper li {
@@ -124,7 +125,7 @@ p {
 		border: 2px solid #e6f3d9;
 	}
 
-	.Ingredients h3 {
+	.BodyText h3 {
 		margin: 0;
 	}
 }
