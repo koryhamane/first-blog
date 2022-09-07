@@ -2,6 +2,27 @@
 	box-sizing: border-box;
 }
 
+.MenuWrap {
+	background-color: rgb(183, 242, 141);
+	font-family: 'Oswald', sans-serif;
+	font-size: 1rem;
+	min-height: 2.75rem;
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+	}
+.ListItem,
+.LastItem {
+	color: #000000;
+	text-decoration: none;
+}
+.ListItem {
+	margin-right: 1rem;
+}
+.LastItem {
+	margin-left: auto;
+}
+
 body {
 	padding: 1rem 0.5rem;
 	font-size: 1.3rem;
@@ -23,7 +44,7 @@ img {
 }
 
 .Strap {
-	font-size: 1rem;
+	font-size: 100%;
 }
 
 .MoneyShot {
@@ -31,7 +52,7 @@ img {
 }
 
 .MoneyShotImg {
-	border: 6px solid #e6f3d9;
+	border: 6px solid rgb(183, 242, 141);
 	border-radius: 4px;
 }
 
@@ -40,7 +61,7 @@ img {
 }
 
 .TextbookImg {
-	border: 6px solid #e6f3d9;
+	border: 6px solid rgb(183, 242, 141);
 	display: block;
   margin-left: auto;
   margin-right: auto;
@@ -122,7 +143,7 @@ p {
 		margin: 0 0 0.5rem 1rem;
 		border-radius: 3px;
 		background-color: #fbfbfb;
-		border: 2px solid #e6f3d9;
+		border: 2px solid rgb(183, 242, 141);
 	}
 
 	.BodyText h3 {
@@ -134,6 +155,12 @@ p {
     p {
       font-size: 200%;
     }
+}
+
+@media screen and (min-width: 601px) {
+	.Strap {
+		font-size: 120%;
+	}
 }
 
 @media screen and (min-width: 601px) {
@@ -151,4 +178,58 @@ body {
 		background-color: rgb(13, 12, 12);
 		color: #ddd;
 	}
+}
+
+.Footer {
+    background-color: indigo;
+    display: flex;
+    flex-direction: column;
+}
+.FlexItem {
+    display: flex;
+    align-items: center;
+    min-height: 6.25rem;
+    padding: 0rem;
+    justify-content: center;
+}
+.FlexHeader {
+    background-color: rgb(255, 255, 255);
+}
+.FlexContent {
+    background-color: rgb(193, 193, 193);
+}
+
+.FlexSideOne {
+    background-color: #ffffff;
+}
+.FlexSideTwo {
+    background-color: #ffffff;
+}
+.FlexFooter {
+    background-color: rgb(183, 242, 141);
+}
+
+@media (min-width: 30rem) {
+    .Footer {
+        flex-flow: row wrap;
+    }
+    .FlexHeader {
+        width: 100%;
+    }
+    .FlexContent {
+        flex: 1 0 auto;
+        order: 3;
+    }
+    .FlexSideOne {
+        width: 25%;
+        order: 2;
+    }
+    .FlexSideTwo {
+        width: 25%;
+        order: 4;
+    }
+    .FlexFooter {
+        width: 100%;
+        order: 5
+    }
 }
