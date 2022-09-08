@@ -6,6 +6,13 @@
         <meta name="description" content="A basic responsive web page post" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link rel="stylesheet" href="css/day 1 blog.css" />
+        <link
+            rel="preload"
+            href="fonts/inter.var.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+         />
     </head>
     <body>
         <div class="MenuWrap">
@@ -93,6 +100,28 @@
                 what I 'm going for, but it's not this. Anyway...
             </p>
         </div>
+        <div class="IntroWrapper">
+            <h2 class="IntroText">Day 4</h2>
+            <div class="MoneyShot">
+                <img class="MoneyShotImg" src="img/day four.png" alt="day four image" />
+            </div>
+        </div>
+        <p></p>
+        <div class="BodyText">
+            <h3 class="SubHeader">Fonts font fonts</h3>
+            <p>     Today we went over CSS selectors, typography, and font colors.
+                After hours of reading, I essentially brushed up on my CSS skills and
+                learned how to import different fonts and their variations. I can confidently
+                say I'm overqualified in the fonts and color department. It's hard to beleive
+                any bootcamp would go over the sytnax of fonts & colors in CSS in this much detail.
+                If it sounds like I'm surprised about the amount of detail I've covered, I am, but 
+                I am as equally happy that I did.
+            </p>
+            <p>Anyway, unless you look at my source code, the only thing I really have to show for what
+                I've learned is that the font for the words in this blog is now a somewhat boring, textbook-y
+                -esque font called "Inter". Anyway...
+            </p>
+        </div>
         <div class="Footer">
             <div class="container">
                 <div class="grid-item1">
@@ -111,7 +140,29 @@
                 </div>
                 <div class="grid-item3">Maybe a disclosure right here</div>
                 <div class="grid-item4">Maybe a subscription box right here</div>
-                <div class="grid-item5">Then something right here.</div>
+                <div class="grid-item5">
+                    <button type="button" id="colorToggle">Toggle Colors</button>
+
+                    <script>
+                    var root = document.documentElement;
+                    var btn = document.getElementById('colorToggle');
+
+                    btn.addEventListener('click', e => {
+                        root.style.setProperty(
+                        '--background',
+                        getComputedStyle(root).getPropertyValue('--background') === '#333'
+                            ? '#eee'
+                            : '#333',
+                        );
+                        root.style.setProperty(
+                        '--foreground',
+                        getComputedStyle(root).getPropertyValue('--foreground') === '#eee'
+                            ? '#333'
+                            : '#eee',
+                        );
+                    });
+                    </script>
+                </div>
             </div>
     </body>
 </html>
